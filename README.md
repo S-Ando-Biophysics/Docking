@@ -10,4 +10,15 @@
     bash 03_grid.sh
     bash 04_docking.sh
     bash 05_export.sh
-    
+
+## Installation of UCSF DOCK 6
+
+    cd ~
+    git clone https://github.com/docking-org/dock6.git
+    cd dock6/install
+    ./configure gnu
+    make all
+    make test
+    echo 'export DOCK_HOME="$HOME/dock6"' >> ~/.bashrc
+    echo 'export PATH="$PATH:$DOCK_HOME/bin"' >> ~/.bashrc
+    source ~/.bashrc
